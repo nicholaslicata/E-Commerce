@@ -1,6 +1,9 @@
 
 function CartProduct({ cartItem, cart }) {
 
+    // console.log(cartItem, 'cartItem');
+    // console.log(singleCartItem, 'singleCartItem');
+
     return (
         <div className='cart-product'>
             <div>

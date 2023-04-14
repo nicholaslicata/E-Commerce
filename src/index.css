@@ -115,3 +115,18 @@
   cursor: pointer;
   opacity: 0.6;
 }
+
+/* Cart */
+
+.cart-container {
+  min-height: 91vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-cart-p {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
