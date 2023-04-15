@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -26,7 +26,7 @@ function App() {
     }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Nav />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -34,7 +34,7 @@ function App() {
           <Route path='cart' element={<Cart cart={cart} setCart={setCart} />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
