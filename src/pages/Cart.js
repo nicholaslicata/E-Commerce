@@ -1,16 +1,13 @@
 import CartProduct from "../components/CartProduct";
 
-function Cart({ cart, setCart, cartItem }) {
+function Cart({ cart }) {
 
-  console.log(cartItem);
-    
     return (
          <div className='cart-container'>
             {cart.length > 0 ? ( 
-              <div>
+              <div className='cart-item-container'>
                 {cart.map((cartItem) => (
                 <CartProduct 
-                // singleCartItem={singleCartItem}
                 cartItem={cartItem}
                 />
                  ))}

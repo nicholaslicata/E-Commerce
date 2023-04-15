@@ -1,33 +1,13 @@
-import { useState, useEffect } from 'react';
 
-function AddButton({ productItem, cartItem, setCartItem, cart, setCart, }) {
+function AddButton({ productItem, cart, setCart }) {
 
-    const [buttonClicked, setButtonClicked]  = useState(false);
-
-    // useEffect(() => {
-    //     setCartItem( {
-    //         title: productItem.title,
-    //         price: productItem.price,
-    //         image: productItem.image,
-    //         id: productItem.id,
-    //         quantity: 1,
-    //     })
-    // }, [buttonClicked]);
-
-    function handleAddItem(e) {
-        console.log(productItem);
-        setButtonClicked(true);
-        
-        // setCartItem((prev) => {
-        //     return {
-        //         ...prev,
-        //     title: productItem.title,
-        //     price: productItem.price,
-        //     image: productItem.image,
-        //     id: productItem.id,
-        //     quantity: 1,
-        //     }
-        // })
+    function handleAddItem() {
+        let isPresent = false;
+        cart.forEach((item) => {
+            if (productItem.id === item.id) {
+                isPresent = true;
+            }
+        })
 
         const cartItem = {
                 title: productItem.title,
@@ -36,12 +16,17 @@ function AddButton({ productItem, cartItem, setCartItem, cart, setCart, }) {
                 id: productItem.id,
         }
 
-        setCart((prev) => {
-            return [
-                ...prev,
-                    cartItem
-            ]
-        })
+        if (isPresent) {
+            return;
+        } else {
+            setCart((prev) => {
+                return [
+                    ...prev,
+                        cartItem
+                ]
+            })
+        }
+     
 }
 
     return (

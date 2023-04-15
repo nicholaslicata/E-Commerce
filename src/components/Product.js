@@ -1,6 +1,6 @@
 import AddButton from '../components/AddButton';
 
-function Product({ productItem, cartItem, setCartItem, cart, setCart}) {
+function Product({ productItem, cart, setCart, itemTotal, setItemTotal }) {
     return (
             <div className='product-container'>
                 <div className='product-img-container'>
@@ -11,10 +11,10 @@ function Product({ productItem, cartItem, setCartItem, cart, setCart}) {
                     <p className='product-price'>{`$ ${productItem.price}`}</p>
                     <AddButton 
                     productItem={productItem} 
-                    // cartItem={cartItem} 
-                    // setCartItem={setCartItem} 
                     cart={cart} 
-                    setCart={setCart} />
+                    setCart={setCart} 
+                    itemTotal={itemTotal}
+                    setItemTotal={setItemTotal}/>
                   </div>
             </div>
     )

@@ -13,15 +13,7 @@ import PageNotFound from './pages/PageNotFound';
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [cartTotal, setCartTotal] = useState(0.00);
   const [cart, setCart] = useState([]);
-//   const [cartItem, setCartItem] = useState({
-//     title: '',
-//     price: '',
-//     image: '',
-//     id: '',
-//     quantity: 0,
-// });
 
   useEffect(() => {
         getProducts();

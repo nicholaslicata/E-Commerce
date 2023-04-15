@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Product from '../components/Product';
 
-function Store({ products, cart, setCart, cartItem, setCartItem }) {
+function Store({ products, cart, setCart }) {
 
 
     return (
@@ -12,8 +12,6 @@ function Store({ products, cart, setCart, cartItem, setCartItem }) {
                 key={productItem.id}
                 cart={cart}
                 setCart={setCart}
-                // cartItem={cartItem}
-                // setCartItem={setCartItem}
                 />
             ))}
         </div>
